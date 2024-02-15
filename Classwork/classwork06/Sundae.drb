@@ -1,0 +1,43 @@
+TRUE
+CLIPS> (clear)
+CLIPS> (load Sundae.clp)
+*
+TRUE
+CLIPS> 
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Reset, then assert the ingredients for the sundae and run it.
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(reset)
+==> f-0     (initial-fact)
+CLIPS> (assert (have-some banana))
+==> f-1     (have-some banana)
+<Fact-1>
+CLIPS> (assert (have-some icecream))
+==> f-2     (have-some icecream)
+<Fact-2>
+CLIPS> (assert (have-some hotfudge))
+==> f-3     (have-some hotfudge)
+<Fact-3>
+CLIPS> (assert (have-some whippedcream))
+==> f-4     (have-some whippedcream)
+<Fact-4>
+CLIPS> (assert (have-some nuts))
+==> f-5     (have-some nuts)
+<Fact-5>
+CLIPS> (assert (have-some dish))
+==> f-6     (have-some dish)
+<Fact-6>
+CLIPS> (run)
+FIRE    1 treat: f-1,f-2,f-3,f-4,f-5,f-6
+<== f-0     (initial-fact)
+<== f-1     (have-some banana)
+<== f-2     (have-some icecream)
+<== f-3     (have-some hotfudge)
+<== f-4     (have-some whippedcream)
+<== f-5     (have-some nuts)
+<== f-6     (have-some dish)
+==> f-7     (have-some slicedbanana)
+==> f-8     (dish-contains slicedbanana icecream hotfudge whippedcream nuts)
+"Time for dessert!" I say.
+CLIPS> 
+(dribble-off)

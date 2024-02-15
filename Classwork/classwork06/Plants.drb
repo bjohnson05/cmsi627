@@ -1,0 +1,107 @@
+TRUE
+CLIPS> 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Clear the environment, then load and test the program with valid
+;;;   values for "nitrogen"
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(clear)
+CLIPS> (load Plants.clp)
+Defining defrule: check-nitrogen +j+j+j
+Defining defrule: check-phosphorus +j+j+j+j
+Defining defrule: check-potassium +j+j+j+j
+Defining defrule: print-remedy +j
+TRUE
+CLIPS> (reset)
+CLIPS> (assert (growth stunted))
+<Fact-1>
+CLIPS> (assert (color pale-yellow))
+<Fact-2>
+CLIPS> (assert (leafEdges reddish-brown))
+<Fact-3>
+CLIPS> (run)
+
+
+Your plant needs some nitrogen
+
+
+CLIPS> 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Clear the environment, then re-load and test the program with
+;;;   valid values for "phosphorus"
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(clear)
+CLIPS> (load Plants.clp)
+Defining defrule: check-nitrogen +j+j+j
+Defining defrule: check-phosphorus +j+j+j+j
+Defining defrule: check-potassium +j+j+j+j
+Defining defrule: print-remedy +j
+TRUE
+CLIPS> (reset)
+CLIPS> (assert (root-growth stunted))
+<Fact-1>
+CLIPS> (assert (color purplish))
+<Fact-2>
+CLIPS> (assert (stalk spindly))
+<Fact-3>
+CLIPS> (assert (maturing delayed))
+<Fact-4>
+CLIPS> (run)
+
+
+Your plant needs some phosphorus
+
+
+CLIPS> 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Clear the environment, then re-load and test the program with
+;;;   valid values for "potassium"
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(clear)
+CLIPS> (load Plants.clp)
+Defining defrule: check-nitrogen +j+j+j
+Defining defrule: check-phosphorus +j+j+j+j
+Defining defrule: check-potassium +j+j+j+j
+Defining defrule: print-remedy +j
+TRUE
+CLIPS> (reset)
+CLIPS> (assert (leaf-edges scorched))
+<Fact-1>
+CLIPS> (assert (color purplish))
+<Fact-2>
+CLIPS> (assert (seeds shriveled))
+<Fact-3>
+CLIPS> (assert (fruit shriveled))
+<Fact-4>
+CLIPS> (run)
+
+
+Your plant needs some potassium
+
+
+CLIPS> 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Clear the environment, then re-load and test the program with
+;;;   invalid values to show that it rejects them
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(clear)
+CLIPS> (load Plants.clp)
+Defining defrule: check-nitrogen +j+j+j
+Defining defrule: check-phosphorus +j+j+j+j
+Defining defrule: check-potassium +j+j+j+j
+Defining defrule: print-remedy +j
+TRUE
+CLIPS> (reset)
+CLIPS> (assert (leaf-edges normal))
+<Fact-1>
+CLIPS> (assert (color green))
+<Fact-2>
+CLIPS> (assert (seeds solid))
+<Fact-3>
+CLIPS> (assert (fruit plump-and-juicy))
+<Fact-4>
+CLIPS> (run)
+CLIPS> 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Turn off the dribble output
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(dribble-off)

@@ -1,0 +1,25 @@
+TRUE
+CLIPS>    (clear)
+CLIPS>    (load Queue.clp)
+****
+TRUE
+CLIPS>    (load QueueTest.clp)
+$
+TRUE
+CLIPS> 
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Reset, then run it.
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   (reset)
+CLIPS>    (run)
+Pushing value D on to queue myQueue
+Pushing value A on to queue myQueue
+Pushing value B on to queue myQueue
+Pushing value C on to queue myQueue
+Popping value Y from queue myQueue
+Queue contents are: <Fact-11>
+CLIPS> 
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Turn off the dribble output
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   (dribble-off)

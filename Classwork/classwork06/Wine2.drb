@@ -1,0 +1,34 @@
+TRUE
+CLIPS> 
+(clear)
+CLIPS> (unwatch all)
+CLIPS> (load Wine.clp)
++!%**+%***+$+%******+*$+$%$*+****
+TRUE
+CLIPS> (reset)
+CLIPS> (run)
+Do you generally prefer dry, medium, or sweet wines? 
+(dribble-off)
+Do you generally prefer dry, medium, or sweet wines? 
+medium
+Do you generally prefer red or white wines? red
+Do you generally prefer light, medium, or full bodied wines? full bodied
+Is the flavor of the meal delicate, average, or strong? strong
+Does the meal have a sauce on it? yes
+Is the sauce for the meal spicy, sweet, cream, or tomato? spicy
+Is the main component of the meal meat, fish, or poultry? fish
+
+        SELECTED WINES
+
+ WINE                  CERTAINTY
+ -------------------------------
+ Geverztraminer           100%
+ Chardonnay               64%
+ Zinfandel                64%
+ Riesling                 40%
+ Pinot-Noir               40%
+ Cabernet-Sauvignon       40%
+ Gamay                    40%
+ Burgundy                 40%
+
+CLIPS> 

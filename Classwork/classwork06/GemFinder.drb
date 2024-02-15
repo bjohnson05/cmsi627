@@ -1,0 +1,161 @@
+TRUE
+CLIPS> (clear)
+CLIPS> (load GemFinder.clp)
+Defining deftemplate: gemStone
+Defining deffacts: table-of-gems
+Defining defrule: get-color +j+j
+Defining defrule: get-hardness =j
+Defining defrule: get-density +j
+Defining defrule: bad-color-entry +j
+Defining defrule: print-results +j+j+j+j
+TRUE
+CLIPS> (reset)
+==> f-0     (initial-fact)
+==> f-1     (gemStone (name diamond) (hardness 10.0) (density 3.52) (colors yellow brown green blue white colorless))
+==> f-2     (gemStone (name corundum) (hardness 9.0) (density 4.0) (colors red pink yellow brown green blue violet black white colorless))
+==> f-3     (gemStone (name chrysoberyl) (hardness 8.5) (density 3.72) (colors yellow brown green))
+==> f-4     (gemStone (name spinel) (hardness 8.0) (density 3.6) (colors red pink yellow brown green blue violet white colorless))
+==> f-5     (gemStone (name topaz) (hardness 8.0) (density 3.52) (colors red pink yellow brown blue violet white colorless))
+==> f-6     (gemStone (name beryl) (hardness 7.5) (density 2.7) (colors red pink yellow brown blue violet white colorless))
+==> f-7     (gemStone (name zircon) (hardness 7.0) (density 4.7) (colors yellow brown green violet white colorless))
+==> f-8     (gemStone (name quartz) (hardness 7.0) (density 2.65) (colors red pink green blue violet white black colorless))
+==> f-9     (gemStone (name tourmaline) (hardness 7.0) (density 3.1) (colors red pink yellow brown green blue white black colorless))
+==> f-10    (gemStone (name peridot) (hardness 6.5) (density 3.3) (colors yellow brown green))
+==> f-11    (gemStone (name jadeite) (hardness 7.5) (density 2.7) (colors red pink yellow brown green blue violet white black colorless))
+==> f-12    (gemStone (name opal) (hardness 5.5) (density 2.1) (colors red pink yellow brown white black colorless))
+==> f-13    (gemStone (name nephrite) (hardness 6.0) (density 2.9) (colors green white black colorless))
+==> f-14    (gemStone (name turquoise) (hardness 6.0) (density 2.7) (colors blue))
+CLIPS> (run)
+FIRE    1 get-color: f-0,
+What color is the gem? 
+(red, pink, yellow, brown, green, blue
+  violet, white, black, or colorless)
+  [Enter] =>green
+==> f-15    (color green)
+FIRE    2 get-hardness: f-0
+What is the hardness of the gem being considered? 8.5
+==> f-16    (hardness 8.5)
+FIRE    3 get-density: f-0
+What is the density of the gem being considered? 3.72
+==> f-17    (density 3.72)
+FIRE    4 print-results: f-16,f-17,f-15,f-3
+
+
+The gem is a chrysoberyl stone.
+
+
+CLIPS> (reset)
+<== f-0     (initial-fact)
+<== f-1     (gemStone (name diamond) (hardness 10.0) (density 3.52) (colors yellow brown green blue white colorless))
+<== f-2     (gemStone (name corundum) (hardness 9.0) (density 4.0) (colors red pink yellow brown green blue violet black white colorless))
+<== f-3     (gemStone (name chrysoberyl) (hardness 8.5) (density 3.72) (colors yellow brown green))
+<== f-4     (gemStone (name spinel) (hardness 8.0) (density 3.6) (colors red pink yellow brown green blue violet white colorless))
+<== f-5     (gemStone (name topaz) (hardness 8.0) (density 3.52) (colors red pink yellow brown blue violet white colorless))
+<== f-6     (gemStone (name beryl) (hardness 7.5) (density 2.7) (colors red pink yellow brown blue violet white colorless))
+<== f-7     (gemStone (name zircon) (hardness 7.0) (density 4.7) (colors yellow brown green violet white colorless))
+<== f-8     (gemStone (name quartz) (hardness 7.0) (density 2.65) (colors red pink green blue violet white black colorless))
+<== f-9     (gemStone (name tourmaline) (hardness 7.0) (density 3.1) (colors red pink yellow brown green blue white black colorless))
+<== f-10    (gemStone (name peridot) (hardness 6.5) (density 3.3) (colors yellow brown green))
+<== f-11    (gemStone (name jadeite) (hardness 7.5) (density 2.7) (colors red pink yellow brown green blue violet white black colorless))
+<== f-12    (gemStone (name opal) (hardness 5.5) (density 2.1) (colors red pink yellow brown white black colorless))
+<== f-13    (gemStone (name nephrite) (hardness 6.0) (density 2.9) (colors green white black colorless))
+<== f-14    (gemStone (name turquoise) (hardness 6.0) (density 2.7) (colors blue))
+<== f-15    (color green)
+<== f-16    (hardness 8.5)
+<== f-17    (density 3.72)
+==> f-0     (initial-fact)
+==> f-1     (gemStone (name diamond) (hardness 10.0) (density 3.52) (colors yellow brown green blue white colorless))
+==> f-2     (gemStone (name corundum) (hardness 9.0) (density 4.0) (colors red pink yellow brown green blue violet black white colorless))
+==> f-3     (gemStone (name chrysoberyl) (hardness 8.5) (density 3.72) (colors yellow brown green))
+==> f-4     (gemStone (name spinel) (hardness 8.0) (density 3.6) (colors red pink yellow brown green blue violet white colorless))
+==> f-5     (gemStone (name topaz) (hardness 8.0) (density 3.52) (colors red pink yellow brown blue violet white colorless))
+==> f-6     (gemStone (name beryl) (hardness 7.5) (density 2.7) (colors red pink yellow brown blue violet white colorless))
+==> f-7     (gemStone (name zircon) (hardness 7.0) (density 4.7) (colors yellow brown green violet white colorless))
+==> f-8     (gemStone (name quartz) (hardness 7.0) (density 2.65) (colors red pink green blue violet white black colorless))
+==> f-9     (gemStone (name tourmaline) (hardness 7.0) (density 3.1) (colors red pink yellow brown green blue white black colorless))
+==> f-10    (gemStone (name peridot) (hardness 6.5) (density 3.3) (colors yellow brown green))
+==> f-11    (gemStone (name jadeite) (hardness 7.5) (density 2.7) (colors red pink yellow brown green blue violet white black colorless))
+==> f-12    (gemStone (name opal) (hardness 5.5) (density 2.1) (colors red pink yellow brown white black colorless))
+==> f-13    (gemStone (name nephrite) (hardness 6.0) (density 2.9) (colors green white black colorless))
+==> f-14    (gemStone (name turquoise) (hardness 6.0) (density 2.7) (colors blue))
+CLIPS> (run)
+FIRE    1 get-color: f-0,
+What color is the gem? 
+(red, pink, yellow, brown, green, blue
+  violet, white, black, or colorless)
+  [Enter] =>white
+==> f-15    (color white)
+FIRE    2 get-hardness: f-0
+What is the hardness of the gem being considered? 10.0
+==> f-16    (hardness 10.0)
+FIRE    3 get-density: f-0
+What is the density of the gem being considered? 3.52
+==> f-17    (density 3.52)
+FIRE    4 print-results: f-16,f-17,f-15,f-1
+
+
+The gem is a diamond stone.
+
+
+CLIPS> (reset)
+<== f-0     (initial-fact)
+<== f-1     (gemStone (name diamond) (hardness 10.0) (density 3.52) (colors yellow brown green blue white colorless))
+<== f-2     (gemStone (name corundum) (hardness 9.0) (density 4.0) (colors red pink yellow brown green blue violet black white colorless))
+<== f-3     (gemStone (name chrysoberyl) (hardness 8.5) (density 3.72) (colors yellow brown green))
+<== f-4     (gemStone (name spinel) (hardness 8.0) (density 3.6) (colors red pink yellow brown green blue violet white colorless))
+<== f-5     (gemStone (name topaz) (hardness 8.0) (density 3.52) (colors red pink yellow brown blue violet white colorless))
+<== f-6     (gemStone (name beryl) (hardness 7.5) (density 2.7) (colors red pink yellow brown blue violet white colorless))
+<== f-7     (gemStone (name zircon) (hardness 7.0) (density 4.7) (colors yellow brown green violet white colorless))
+<== f-8     (gemStone (name quartz) (hardness 7.0) (density 2.65) (colors red pink green blue violet white black colorless))
+<== f-9     (gemStone (name tourmaline) (hardness 7.0) (density 3.1) (colors red pink yellow brown green blue white black colorless))
+<== f-10    (gemStone (name peridot) (hardness 6.5) (density 3.3) (colors yellow brown green))
+<== f-11    (gemStone (name jadeite) (hardness 7.5) (density 2.7) (colors red pink yellow brown green blue violet white black colorless))
+<== f-12    (gemStone (name opal) (hardness 5.5) (density 2.1) (colors red pink yellow brown white black colorless))
+<== f-13    (gemStone (name nephrite) (hardness 6.0) (density 2.9) (colors green white black colorless))
+<== f-14    (gemStone (name turquoise) (hardness 6.0) (density 2.7) (colors blue))
+<== f-15    (color white)
+<== f-16    (hardness 10.0)
+<== f-17    (density 3.52)
+==> f-0     (initial-fact)
+==> f-1     (gemStone (name diamond) (hardness 10.0) (density 3.52) (colors yellow brown green blue white colorless))
+==> f-2     (gemStone (name corundum) (hardness 9.0) (density 4.0) (colors red pink yellow brown green blue violet black white colorless))
+==> f-3     (gemStone (name chrysoberyl) (hardness 8.5) (density 3.72) (colors yellow brown green))
+==> f-4     (gemStone (name spinel) (hardness 8.0) (density 3.6) (colors red pink yellow brown green blue violet white colorless))
+==> f-5     (gemStone (name topaz) (hardness 8.0) (density 3.52) (colors red pink yellow brown blue violet white colorless))
+==> f-6     (gemStone (name beryl) (hardness 7.5) (density 2.7) (colors red pink yellow brown blue violet white colorless))
+==> f-7     (gemStone (name zircon) (hardness 7.0) (density 4.7) (colors yellow brown green violet white colorless))
+==> f-8     (gemStone (name quartz) (hardness 7.0) (density 2.65) (colors red pink green blue violet white black colorless))
+==> f-9     (gemStone (name tourmaline) (hardness 7.0) (density 3.1) (colors red pink yellow brown green blue white black colorless))
+==> f-10    (gemStone (name peridot) (hardness 6.5) (density 3.3) (colors yellow brown green))
+==> f-11    (gemStone (name jadeite) (hardness 7.5) (density 2.7) (colors red pink yellow brown green blue violet white black colorless))
+==> f-12    (gemStone (name opal) (hardness 5.5) (density 2.1) (colors red pink yellow brown white black colorless))
+==> f-13    (gemStone (name nephrite) (hardness 6.0) (density 2.9) (colors green white black colorless))
+==> f-14    (gemStone (name turquoise) (hardness 6.0) (density 2.7) (colors blue))
+CLIPS> (run)
+FIRE    1 get-color: f-0,
+What color is the gem? 
+(red, pink, yellow, brown, green, blue
+  violet, white, black, or colorless)
+  [Enter] =>gold
+==> f-15    (color gold)
+FIRE    2 bad-color-entry: f-15
+<== f-15    (color gold)
+FIRE    3 get-color: f-0,
+What color is the gem? 
+(red, pink, yellow, brown, green, blue
+  violet, white, black, or colorless)
+  [Enter] =>blue
+==> f-16    (color blue)
+FIRE    4 get-hardness: f-0
+What is the hardness of the gem being considered? 6.0
+==> f-17    (hardness 6.0)
+FIRE    5 get-density: f-0
+What is the density of the gem being considered? 2.7
+==> f-18    (density 2.7)
+FIRE    6 print-results: f-17,f-18,f-16,f-14
+
+
+The gem is a turquoise stone.
+
+
+CLIPS> (dribble-off)

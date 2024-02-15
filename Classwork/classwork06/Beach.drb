@@ -1,0 +1,66 @@
+TRUE
+CLIPS> 
+(clear)
+CLIPS> (unwatch all)
+CLIPS> (watch facts)
+CLIPS> (watch rules)
+CLIPS> 
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Load the file, then test with working assertions
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(load Beach.clp)
+**
+TRUE
+CLIPS> (reset)
+CLIPS> (assert (weather-is warm))
+==> f-1     (weather-is warm)
+<Fact-1>
+CLIPS> (assert (sky-is blue))
+==> f-2     (sky-is blue)
+<Fact-2>
+CLIPS> (run)
+FIRE    1 beach-day: f-1,f-2
+It's a good day for the beach!
+CLIPS> 
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Reset, then test with non-working assertions
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(reset)
+<== f-1     (weather-is warm)
+<== f-2     (sky-is blue)
+CLIPS> (assert (weather-is chilly))
+==> f-1     (weather-is chilly)
+<Fact-1>
+CLIPS> (assert (sky-is blue))
+==> f-2     (sky-is blue)
+<Fact-2>
+CLIPS> (run)
+CLIPS> 
+(reset)
+<== f-1     (weather-is chilly)
+<== f-2     (sky-is blue)
+CLIPS> (assert (weather-is warm))
+==> f-1     (weather-is warm)
+<Fact-1>
+CLIPS> (assert (sky-is overcast))
+==> f-2     (sky-is overcast)
+<Fact-2>
+CLIPS> (run)
+CLIPS> 
+(reset)
+<== f-1     (weather-is warm)
+<== f-2     (sky-is overcast)
+CLIPS> (assert (weather-is chilly))
+==> f-1     (weather-is chilly)
+<Fact-1>
+CLIPS> (assert (sky-is overcast))
+==> f-2     (sky-is overcast)
+<Fact-2>
+CLIPS> (run)
+FIRE    1 beach-day2: f-1,f-2
+Wear a sweater to the beach!
+CLIPS> 
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;  Kill the dribble
+;;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(dribble-off)

@@ -1,0 +1,24 @@
+TRUE
+CLIPS> 
+(clear)
+CLIPS> (load Course.clp)
+*
+TRUE
+CLIPS> (reset)
+CLIPS> (assert (course cmsi 682))
+<Fact-1>
+CLIPS> (facts)
+f-1     (course cmsi 682)
+For a total of 1 fact.
+CLIPS> (run)
+Course name  :	CMSI 682
+Course title :	Knowledge-based Systems
+Instructor   :	Dr. Stephanie E. August
+Course term  :	Spring 2003
+CLIPS> (reset)
+CLIPS> (retract *)
+CLIPS> (assert (course cmsi 587))
+<Fact-1>
+CLIPS> (run)
+CLIPS> 
+(dribble-off)
