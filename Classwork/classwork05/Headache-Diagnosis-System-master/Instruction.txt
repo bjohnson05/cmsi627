@@ -1,0 +1,3 @@
+To run the system from source code, there are two steps to be followed.
+First, load the codes from q2.CLP.
+Then, only the the codes from q2_1.CLP
